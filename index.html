@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <!--
+    ===================================================================
+     ███╗   ███╗ █████╗ ██████╗ ████████╗ ██████╗ ██████╗ ███████╗██████╗ 
+     ████╗ ████║██╔══██╗██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗██╔════╝██╔══██╗
+     ██╔████╔██║███████║██████╔╝   ██║   ██║   ██║██████╔╝█████╗  ██████╔╝
+     ██║╚██╔╝██║██╔══██║██╔═══╝    ██║   ██║   ██║██╔══██╗██╔══╝  ██╔══██╗
+     ██║ ╚═╝ ██║██║  ██║██║        ██║   ╚██████╔╝██████╔╝███████╗██║  ██║
+     ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝        ╚═╝    ╚═════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝
+    
+    Maptober 2026 • Annual Mapart Event
+    Keep it creative! Built for the mapart community.
+	
+	-Kleingebaeck
+    ===================================================================
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maptober 2026 • 0b0t – Jury Voting</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            maptober: {
+              obsidian: '#0b0604',
+              dark: '#140b07',
+              card: '#1f120b',
+              cardHover: '#2c1a10',
+              border: '#492b19',
+              borderGlow: '#7c431e',
+              amber: '#ff9d2e',
+              gold: '#ffc83b',
+              pumpkin: '#ea580c',
+              lava: '#c2410c',
+              parchment: '#e7b56b',
+              textMain: '#f7e8d8',
+              textMuted: '#b59479'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      user-select: none;
+      background-color: #0b0604;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(234, 88, 12, 0.14) 0%, transparent 45%),
+        radial-gradient(circle at 85% 25%, rgba(255, 157, 46, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(194, 65, 12, 0.16) 0%, transparent 55%),
+        linear-gradient(rgba(255, 140, 26, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 140, 26, 0.03) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 24px 24px, 24px 24px;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .font-pixel {
+      font-family: 'Silkscreen', monospace;
+    }
+    .pixelated {
+      image-rendering: pixelated;
+    }
+    .maptober-title-3d {
+      font-family: 'Silkscreen', monospace;
+      background: linear-gradient(180deg, #ffe066 0%, #ff9d2e 55%, #d9531e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0px 3px 0px #3b1706) drop-shadow(0px 5px 10px rgba(0,0,0,0.8));
+      letter-spacing: -0.03em;
+    }
+    .mc-map-frame {
+      background: #120905;
+      border: 3px solid #59331d;
+      box-shadow: 
+        inset 0 0 0 2px #26140b,
+        0 10px 30px -5px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(234, 88, 12, 0.12);
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #140b07;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #492b19;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ea580c;
+    }
+  </style>
+</head>
+<body class="text-maptober-textMain min-h-screen flex flex-col justify-between selection:bg-maptober-pumpkin selection:text-white">
+
+  <!-- TOP HEADER -->
+  <header class="bg-maptober-dark/95 backdrop-blur-md border-b-2 border-maptober-border sticky top-0 z-40 px-4 py-2.5 sm:px-6 shadow-xl">
+    <div class="max-w-5xl mx-auto flex items-center justify-between gap-3">
+      
+      <!-- Brand / Logo Area -->
+      <div class="flex items-center space-x-3.5">
+        <div class="w-11 h-11 rounded bg-[#2b1408] p-0.5 border-2 border-[#3b1909] shadow-lg flex-shrink-0 flex items-center justify-center relative">
+          <svg viewBox="0 0 16 16" class="w-full h-full pixelated">
+            <rect x="0" y="0" width="16" height="16" fill="#2d1206"/>
+            <rect x="1" y="1" width="14" height="14" fill="#d99b43"/>
+            <rect x="2" y="2" width="12" height="12" fill="#f0c265"/>
+            <rect x="2" y="2" width="2" height="1" fill="#d99b43"/>
+            <rect x="12" y="13" width="2" height="1" fill="#d99b43"/>
+            <rect x="7" y="3" width="2" height="2" fill="#6b3410"/>
+            <rect x="8" y="2" width="2" height="1" fill="#6b3410"/>
+            <rect x="4" y="5" width="8" height="7" fill="#d9531e"/>
+            <rect x="3" y="6" width="10" height="5" fill="#ea6a24"/>
+            <rect x="5" y="5" width="2" height="7" fill="#f7882f"/>
+            <rect x="9" y="5" width="2" height="7" fill="#f7882f"/>
+            <rect x="7" y="5" width="2" height="7" fill="#d9531e"/>
+            <rect x="5" y="12" width="6" height="1" fill="#9c3311"/>
+          </svg>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <img src="maptober-26_logo.png" 
+               alt="Maptober 2026 0b0t" 
+               class="h-10 sm:h-11 w-auto object-contain hidden"
+               onload="this.classList.remove('hidden'); document.getElementById('fallback-logo-text').classList.add('hidden');"
+               onerror="this.classList.add('hidden');">
+          
+          <div id="fallback-logo-text">
+            <div class="flex items-center gap-2">
+              <span class="font-pixel text-base sm:text-xl font-bold maptober-title-3d tracking-wider">MAPTOBER</span>
+              <span class="font-pixel text-[10px] sm:text-xs px-1.5 py-0.5 rounded bg-maptober-pumpkin/30 text-maptober-gold border border-maptober-amber/40">2026</span>
+            </div>
+            <p class="font-pixel text-[10px] text-maptober-amber tracking-widest uppercase">0B0T • JURY VOTING</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Controls -->
+      <div class="flex items-center space-x-2 sm:space-x-2.5">
+        <button onclick="toggleRulesModal()" class="px-3 py-1.5 rounded-lg bg-maptober-card hover:bg-maptober-cardHover text-xs font-semibold text-maptober-gold border border-maptober-amber/50 hover:border-maptober-gold flex items-center gap-1.5 transition shadow">
+          <span>📜</span>
+          <span class="hidden sm:inline">Scoring & Bonus</span>
+          <span class="sm:hidden">Rules</span>
+        </button>
+
+        <button onclick="toggleArtistsModal()" class="px-3 py-1.5 rounded-lg bg-maptober-card hover:bg-maptober-cardHover text-xs font-semibold text-maptober-parchment border border-maptober-border hover:border-maptober-amber/60 flex items-center gap-1.5 transition shadow">
+          <span>👥</span>
+          <span class="hidden sm:inline">Artist Stats</span>
+          <span class="sm:hidden">Stats</span>
+        </button>
+
+        <button onclick="toggleGridModal()" class="px-3 py-1.5 rounded-lg bg-maptober-card hover:bg-maptober-cardHover text-xs font-semibold text-maptober-textMain border border-maptober-border hover:border-maptober-amber/60 flex items-center gap-2 transition shadow">
+          <svg class="w-4 h-4 text-maptober-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+          </svg>
+          <span class="hidden sm:inline">All Maps</span>
+          <span id="header-progress-badge" class="font-mono text-[11px] px-2 py-0.5 rounded bg-gradient-to-r from-maptober-pumpkin to-maptober-amber text-black font-extrabold">0/125</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-4xl w-full mx-auto p-4 sm:p-6 flex-grow flex flex-col justify-center">
+
+    <!-- LAVA PROGRESS BAR -->
+    <div class="mb-4">
+      <div class="flex justify-between items-center text-[11px] font-mono text-maptober-textMuted mb-1 px-0.5">
+        <span>JURY PROGRESS</span>
+        <span id="progress-percent-label" class="text-maptober-gold font-bold">0% completed</span>
+      </div>
+      <div class="w-full bg-maptober-dark rounded-full h-2.5 overflow-hidden border border-maptober-border shadow-inner">
+        <div id="progress-bar-fill" class="bg-gradient-to-r from-maptober-lava via-maptober-pumpkin to-maptober-gold h-full rounded-full transition-all duration-300 w-0 shadow-[0_0_12px_#ff9d2e]"></div>
+      </div>
+    </div>
+
+    <!-- MAIN CARD -->
+    <div class="bg-maptober-card/95 backdrop-blur-sm border-2 border-maptober-border rounded-xl shadow-[0_15px_40px_rgba(0,0,0,0.85)] overflow-hidden flex flex-col transition-all">
+
+      <!-- CARD TOP BAR -->
+      <div class="px-5 py-3 border-b-2 border-maptober-border flex justify-between items-center bg-maptober-dark/90">
+        <div class="flex items-center space-x-2">
+          <span id="badge-day" class="px-2.5 py-1 rounded font-pixel text-xs font-bold bg-maptober-pumpkin/25 text-maptober-gold border border-maptober-amber/40 shadow-sm">
+            DAY 1
+          </span>
+          <span id="badge-size" class="px-2.5 py-1 rounded font-mono text-xs font-semibold bg-maptober-obsidian text-maptober-parchment border border-maptober-border">
+            Size: 2x2
+          </span>
+        </div>
+        <div class="text-xs font-pixel text-maptober-textMuted">
+          MAP <span id="current-index-text" class="text-maptober-gold font-bold">1</span> / <span id="total-maps-text">125</span>
+        </div>
+      </div>
+
+      <!-- CARD BODY: IMAGE & META -->
+      <div class="p-5 sm:p-7 flex flex-col lg:flex-row gap-6 items-center">
+        
+        <!-- MAP IMAGE CONTAINER -->
+        <div class="relative w-full lg:w-3/5 aspect-square max-h-[390px] sm:max-h-[450px] mc-map-frame rounded-lg overflow-hidden flex items-center justify-center group">
+          <img id="map-preview-img" 
+               src="" 
+               alt="Mapart" 
+               class="max-w-full max-h-full object-contain transition-transform duration-200 group-hover:scale-[1.02]">
+          
+          <div class="absolute bottom-2.5 right-2.5 flex items-center gap-1.5">
+            <span id="img-source-badge" class="bg-black/75 border border-maptober-border px-2 py-1 rounded text-[10px] font-mono text-maptober-textMuted">
+              Local
+            </span>
+            <a id="map-original-link" href="#" target="_blank" rel="noopener noreferrer" class="bg-black/85 hover:bg-maptober-pumpkin border border-maptober-amber/40 backdrop-blur-md px-2.5 py-1 rounded text-[11px] font-semibold text-white transition flex items-center gap-1 shadow-lg">
+              <span>Full Res ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- INFO & RATING CONTROLS -->
+        <div class="w-full lg:w-2/5 flex flex-col justify-between self-stretch">
+          
+          <div>
+            <div class="mb-4 bg-maptober-dark/70 p-3.5 rounded-lg border border-maptober-border">
+              <span class="text-[10px] font-pixel uppercase tracking-wider text-maptober-amber">Mapart Title</span>
+              <h2 id="map-name" class="text-lg sm:text-xl font-extrabold text-white tracking-tight mt-0.5 leading-snug break-words">
+                Map Name
+              </h2>
+            </div>
+
+            <div class="space-y-2 mb-6 text-sm bg-maptober-dark/40 p-3.5 rounded-lg border border-maptober-border/60">
+              <div class="flex items-center justify-between py-1 border-b border-maptober-border/50 gap-2">
+                <span class="text-maptober-textMuted text-xs">Artist / Team:</span>
+                <span id="map-artist" class="font-bold text-maptober-parchment text-right truncate max-w-[210px]">Artist</span>
+              </div>
+              <div class="flex items-center justify-between py-1 border-b border-maptober-border/50">
+                <span class="text-maptober-textMuted text-xs">Size (Maps):</span>
+                <span id="map-blocks" class="font-mono text-xs text-maptober-textMain">4 Maps (2x2)</span>
+              </div>
+              <div class="flex items-center justify-between py-1 border-b border-maptober-border/50">
+                <span class="text-maptober-textMuted text-xs">Size Bonus:</span>
+                <button onclick="toggleRulesModal()" class="font-pixel text-xs text-amber-400 hover:text-amber-300 font-bold underline decoration-dotted underline-offset-4 flex items-center gap-1" title="Click for bonus table">
+                  <span id="map-bonus">+3 PTS</span>
+                  <span class="text-[10px]">ⓘ</span>
+                </button>
+              </div>
+              <div class="flex items-center justify-between pt-1">
+                <span class="text-maptober-textMuted text-xs">Your Vote:</span>
+                <span id="current-vote-status" class="font-pixel text-xs text-maptober-gold">UNRATED</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RATING SCALE (1 - 10) -->
+          <div>
+            <div class="flex items-center justify-between mb-2.5">
+              <label class="text-xs font-pixel uppercase tracking-wider text-maptober-gold">Score (1 - 10)</label>
+              <span class="text-[11px] text-maptober-textMuted">Keys <kbd class="px-1.5 py-0.5 bg-maptober-obsidian border border-maptober-border rounded text-[10px] text-maptober-gold font-mono">1</kbd>–<kbd class="px-1.5 py-0.5 bg-maptober-obsidian border border-maptober-border rounded text-[10px] text-maptober-gold font-mono">0</kbd></span>
+            </div>
+
+            <div class="grid grid-cols-5 gap-2" id="rating-buttons-grid">
+              <!-- Buttons 1 to 10 generated in JS -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CARD FOOTER: NAVIGATION -->
+      <div class="px-5 py-3.5 bg-maptober-dark border-t-2 border-maptober-border flex justify-between items-center gap-3">
+        <button id="btn-prev" onclick="navigate(-1)" class="px-4 py-2 rounded-lg bg-maptober-card hover:bg-maptober-cardHover border border-maptober-border hover:border-maptober-amber/50 text-maptober-textMain text-xs sm:text-sm font-pixel flex items-center gap-1.5 transition disabled:opacity-30 disabled:cursor-not-allowed">
+          <span>◄</span> Prev
+        </button>
+
+        <div class="flex items-center gap-2">
+          <button onclick="jumpToNextUnrated()" id="btn-next-unrated" class="px-3 py-1.5 rounded bg-maptober-pumpkin/20 hover:bg-maptober-pumpkin/35 border border-maptober-pumpkin/50 text-maptober-gold text-xs font-medium transition">
+            Next Unrated Map ⏭
+          </button>
+        </div>
+
+        <button id="btn-next" onclick="navigate(1)" class="px-4 py-2 rounded-lg bg-maptober-card hover:bg-maptober-cardHover border border-maptober-border hover:border-maptober-amber/50 text-maptober-textMain text-xs sm:text-sm font-pixel flex items-center gap-1.5 transition disabled:opacity-30 disabled:cursor-not-allowed">
+          Next <span>►</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- COMPLETION BANNER / EXPORT SECTION -->
+    <div id="export-section" class="mt-6 bg-gradient-to-br from-[#2c1508] via-maptober-card to-maptober-dark border-2 border-maptober-gold rounded-xl p-5 sm:p-6 shadow-[0_0_35px_rgba(255,200,59,0.25)] hidden">
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 border-b border-maptober-border pb-4">
+        <div>
+          <div class="flex items-center gap-2.5">
+            <span class="text-2xl">🏆</span>
+            <h3 class="text-base sm:text-lg font-pixel text-maptober-gold">VOTING COMPLETE (125 / 125 MAPS)!</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-maptober-textMuted mt-1">
+            Awesome job! Click <strong>"Copy Discord Message"</strong> below and send the copied code block directly to <strong>Kleingebaeck</strong> via Discord DM.
+          </p>
+        </div>
+
+        <div class="flex items-center w-full lg:w-auto">
+          <button onclick="copySubmissionData()" class="w-full lg:w-auto px-5 py-3 rounded-lg bg-gradient-to-r from-maptober-pumpkin to-maptober-amber hover:from-amber-500 hover:to-yellow-400 font-pixel text-black font-bold text-xs sm:text-sm shadow-lg flex items-center justify-center gap-2 transition active:scale-95 whitespace-nowrap">
+            📋 COPY DISCORD MESSAGE
+          </button>
+        </div>
+      </div>
+
+      <!-- Mini Live Summary of Juror's Own Votes -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 my-4" id="juror-summary-cards">
+        <!-- Populated dynamically via JS -->
+      </div>
+
+      <div>
+        <div class="flex justify-between items-center text-[11px] font-mono text-maptober-textMuted mb-1">
+          <span>READY-TO-SEND DISCORD MESSAGE (FOR KLEINGEBAECK):</span>
+          <span class="text-maptober-gold">Paste directly into Discord DM (Ctrl+V)</span>
+        </div>
+        <textarea id="raw-export-output" readonly class="w-full h-28 bg-maptober-obsidian border border-maptober-border rounded-lg p-3 font-mono text-[11px] text-amber-300 resize-none focus:outline-none select-all"></textarea>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-4 text-center text-xs text-maptober-textMuted border-t border-maptober-border bg-maptober-dark/80">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2">
+      <span class="font-pixel text-[10px] tracking-wider">0B0T MAPTOBER 2026 • JURY TERMINAL</span>
+      <div class="flex items-center gap-4">
+        <button onclick="copySubmissionData()" class="text-maptober-amber hover:text-maptober-gold underline transition text-[11px]">
+          Export current progress
+        </button>
+        <button onclick="promptResetVotes()" class="text-rose-400 hover:text-rose-300 underline transition text-[11px]">
+          Reset all votes
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: ALL MAPS OVERVIEW GRID -->
+  <div id="grid-modal" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-maptober-dark border-2 border-maptober-border rounded-xl w-full max-w-4xl max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
+      <div class="px-5 py-4 border-b border-maptober-border flex justify-between items-center bg-maptober-card">
+        <div>
+          <h3 class="text-maptober-gold font-pixel text-sm sm:text-base">OVERVIEW OF ALL 125 MAPS</h3>
+          <p class="text-xs text-maptober-textMuted mt-0.5">Click any submission to jump directly to it</p>
+        </div>
+        <button onclick="toggleGridModal()" class="w-8 h-8 rounded-lg bg-maptober-obsidian hover:bg-maptober-border text-maptober-textMuted hover:text-white flex items-center justify-center text-lg font-bold transition border border-maptober-border">
+          ✕
+        </button>
+      </div>
+
+      <div class="p-4 sm:p-5 overflow-y-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3" id="modal-grid-content">
+        <!-- Grid Items injected via JS -->
+      </div>
+
+      <div class="px-5 py-3 bg-maptober-obsidian border-t border-maptober-border flex justify-between items-center text-xs text-maptober-textMuted">
+        <div class="flex items-center gap-4">
+          <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span> Rated</span>
+          <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-maptober-border"></span> Unrated</span>
+        </div>
+        <button onclick="toggleGridModal()" class="px-4 py-1.5 bg-maptober-card border border-maptober-border rounded font-pixel text-[11px] text-maptober-gold hover:bg-maptober-cardHover">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: SCORING & BONUS RULES EXPLANATION -->
+  <div id="rules-modal" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-maptober-dark border-2 border-maptober-gold/70 rounded-xl w-full max-w-3xl max-h-[88vh] flex flex-col shadow-2xl overflow-hidden">
+      <div class="px-5 py-4 border-b border-maptober-border flex justify-between items-center bg-maptober-card">
+        <div class="flex items-center gap-2.5">
+          <span class="text-xl">📜</span>
+          <div>
+            <h3 class="text-maptober-gold font-pixel text-sm sm:text-base">MAPTOBER 2026 • SCORING & BONUS SYSTEM</h3>
+            <p class="text-xs text-maptober-textMuted">Fair weighting for 3–4 Jury members, Size Bonus & Homerun Bonus</p>
+          </div>
+        </div>
+        <button onclick="toggleRulesModal()" class="w-8 h-8 rounded-lg bg-maptober-obsidian hover:bg-maptober-border text-maptober-textMuted hover:text-white flex items-center justify-center text-lg font-bold transition border border-maptober-border">
+          ✕
+        </button>
+      </div>
+
+      <div class="p-5 sm:p-6 overflow-y-auto space-y-6 text-xs sm:text-sm leading-relaxed text-maptober-textMain">
+        <div class="bg-maptober-obsidian/90 border border-maptober-border rounded-lg p-4">
+          <div class="text-xs font-pixel text-maptober-amber uppercase mb-2">1. Score Formula per Mapart</div>
+          <p class="text-maptober-textMuted mb-3">
+            With <strong>3 to 4 jury members</strong> voting this year, the base score is calculated as the <strong>average (Ø 1.00 to 10.00 points)</strong> of all jury votes:
+          </p>
+          <div class="bg-maptober-card border border-maptober-amber/40 rounded p-3 font-mono text-center text-maptober-gold font-bold text-xs sm:text-sm">
+            Map Score = Ø Jury Score (1–10 pts) + Size Bonus (+1 to +10 pts)
+          </div>
+        </div>
+
+        <div>
+          <div class="text-xs font-pixel text-maptober-amber uppercase mb-2.5">2. Size Bonus Brackets (Max. +10 Points)</div>
+          <div class="overflow-hidden rounded-lg border border-maptober-border">
+            <table class="w-full text-left border-collapse font-mono text-xs">
+              <thead>
+                <tr class="bg-maptober-card text-maptober-gold border-b border-maptober-border">
+                  <th class="py-2.5 px-3">Tier</th>
+                  <th class="py-2.5 px-3">Area (Maps)</th>
+                  <th class="py-2.5 px-3">Common Sizes</th>
+                  <th class="py-2.5 px-3 text-right">Bonus</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-maptober-border/60 bg-maptober-obsidian/70">
+                <tr>
+                  <td class="py-2 px-3 text-maptober-parchment font-sans font-semibold">Mini / Standard</td>
+                  <td class="py-2 px-3">1 Map</td>
+                  <td class="py-2 px-3 text-maptober-textMuted">1×1 (incl. 3D/Staircased)</td>
+                  <td class="py-2 px-3 text-right font-bold text-amber-400">+1 pt</td>
+                </tr>
+                <tr>
+                  <td class="py-2 px-3 text-maptober-parchment font-sans font-semibold">Small</td>
+                  <td class="py-2 px-3">2 – 4 Maps</td>
+                  <td class="py-2 px-3 text-maptober-textMuted">1×2, 2×1, 3×1, 2×2</td>
+                  <td class="py-2 px-3 text-right font-bold text-amber-400">+3 pts</td>
+                </tr>
+                <tr>
+                  <td class="py-2 px-3 text-maptober-parchment font-sans font-semibold">Medium</td>
+                  <td class="py-2 px-3">5 – 9 Maps</td>
+                  <td class="py-2 px-3 text-maptober-textMuted">2×3, 3×2, 5×1, 4×2, 3×3</td>
+                  <td class="py-2 px-3 text-right font-bold text-amber-400">+5 pts</td>
+                </tr>
+                <tr>
+                  <td class="py-2 px-3 text-maptober-parchment font-sans font-semibold">Large</td>
+                  <td class="py-2 px-3">10 – 20 Maps</td>
+                  <td class="py-2 px-3 text-maptober-textMuted">3×4, 5×3, 6×3, 4×5</td>
+                  <td class="py-2 px-3 text-right font-bold text-amber-400">+8 pts</td>
+                </tr>
+                <tr class="bg-amber-950/25">
+                  <td class="py-2 px-3 text-maptober-gold font-sans font-bold">Mega Mapart</td>
+                  <td class="py-2 px-3">21+ Maps</td>
+                  <td class="py-2 px-3 text-maptober-textMuted">7×3, 5×5, 8×8, 9×6, 16×10</td>
+                  <td class="py-2 px-3 text-right font-bold text-maptober-gold">+10 pts</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-amber-950/60 to-maptober-card border border-maptober-gold/50 rounded-lg p-4">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-xs font-pixel text-maptober-gold uppercase">3. Homerun Bonus (All 31 Days Completed)</span>
+            <span class="px-2 py-0.5 rounded bg-maptober-gold text-black font-pixel text-[11px] font-bold">+35 POINTS</span>
+          </div>
+          <p class="text-maptober-textMuted text-xs leading-relaxed">
+            Artists or teams completing a valid mapart for <strong>every single day from Oct 1 to Oct 31 (31/31 days)</strong> receive a one-time <strong>Homerun Bonus of +35 points</strong>.
+          </p>
+        </div>
+      </div>
+
+      <div class="px-5 py-3 bg-maptober-obsidian border-t border-maptober-border flex justify-end">
+        <button onclick="toggleRulesModal()" class="px-5 py-2 bg-gradient-to-r from-maptober-pumpkin to-maptober-amber text-black font-pixel text-xs font-bold rounded-lg hover:brightness-110 transition">
+          GOT IT
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: ARTIST SUMMARY & HOMERUN LEADERBOARD -->
+  <div id="artists-modal" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-maptober-dark border-2 border-maptober-border rounded-xl w-full max-w-3xl max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
+      <div class="px-5 py-4 border-b border-maptober-border flex justify-between items-center bg-maptober-card">
+        <div class="flex items-center gap-2.5">
+          <span class="text-xl">👥</span>
+          <div>
+            <h3 class="text-maptober-gold font-pixel text-sm sm:text-base">ARTIST SUBMISSIONS & HOMERUN STATUS</h3>
+            <p class="text-xs text-maptober-textMuted">Overview of submissions and 31/31 day completion</p>
+          </div>
+        </div>
+        <button onclick="toggleArtistsModal()" class="w-8 h-8 rounded-lg bg-maptober-obsidian hover:bg-maptober-border text-maptober-textMuted hover:text-white flex items-center justify-center text-lg font-bold transition border border-maptober-border">
+          ✕
+        </button>
+      </div>
+
+      <div class="p-4 sm:p-6 overflow-y-auto space-y-4">
+        <div class="overflow-hidden rounded-lg border border-maptober-border">
+          <table class="w-full text-left border-collapse font-mono text-xs">
+            <thead>
+              <tr class="bg-maptober-card text-maptober-gold border-b border-maptober-border font-pixel text-[11px]">
+                <th class="py-3 px-3.5">Artist / Team</th>
+                <th class="py-3 px-3.5 text-center">Submissions</th>
+                <th class="py-3 px-3.5 text-center">Homerun (31 Days)</th>
+                <th class="py-3 px-3.5 text-right">Bonus Points</th>
+              </tr>
+            </thead>
+            <tbody id="artists-table-body" class="divide-y divide-maptober-border/60 bg-maptober-obsidian/80 text-maptober-textMain">
+              <!-- Populated dynamically via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="px-5 py-3 bg-maptober-obsidian border-t border-maptober-border flex justify-between items-center">
+        <span class="text-[11px] text-maptober-textMuted font-mono">Total Valid Submissions: 125 maps</span>
+        <button onclick="toggleArtistsModal()" class="px-4 py-1.5 bg-maptober-card border border-maptober-border rounded font-pixel text-[11px] text-maptober-gold hover:bg-maptober-cardHover">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION BOX -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-maptober-pumpkin to-maptober-amber text-black px-4 py-3 rounded-lg shadow-2xl flex items-center gap-3 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 border border-yellow-300 font-bold text-sm">
+    <span class="text-lg">🎃</span>
+    <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // --- FULL DATASET MAPTOBER 2026 (125 valid submissions) ---
+    const mapsData = [
+      { id: 1, day: 1, name: "Mountain", artist: "CherryTeam", size: "10x6", blocks: 60, bonus: "+10", file: "image-351def5b5f84618b.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1555096093908275292/image.png?backend=b2&ex=6ae82619&is=6ae6d499&hm=46fc16d1cbf4d4586c110238b7f4d4d465151dc6ed150cce278754b0b398dd88&" },
+      { id: 2, day: 1, name: "who?", artist: "SteinerndeMedusa", size: "2x2", blocks: 4, bonus: "+3", file: "image-90e76ac8d574f7a2.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1555246213710745640/image.png?backend=b2&ex=6ae80928&is=6ae6b7a8&hm=8e762eaefe2cc138aa563f6326366fd3b79cccf584e0f7e60beb5d3b0b307d57&" },
+      { id: 3, day: 1, name: "Xen", artist: "KINGS OF CLOUD", size: "4x2", blocks: 8, bonus: "+5", file: "image-6ba88ca77b6fec6e.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1555278227881066618/image.png?backend=b2&ex=6ae826f9&is=6ae6d579&hm=af540098396a89e08bfc8c6410de76a5e0b2a367bfa64d4a099fcbc56204ae99&" },
+      { id: 4, day: 2, name: "Astronaut", artist: "CherryTeam", size: "5x3", blocks: 15, bonus: "+8", file: "image-74380e952ddc4d50.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1555285772142379079/image.png?backend=b2&ex=6ae82dff&is=6ae6dc7f&hm=7693e55be3633cc86d85014884b48ae9f40291460b460d4466302e8afdc340d9&" },
+      { id: 5, day: 1, name: "Gunbarrel", artist: "Endenjoyers", size: "2x2", blocks: 4, bonus: "+3", file: "2026-10-01_20.55.19-2d9004586949c752.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1555293558326427779/2026-10-01_20.55.19.png?backend=b2&ex=6ae83540&is=6ae6e3c0&hm=249966d7affa9f16f415c63c6ed88c55cdbabd844284998ca6897ce3a52f6a74&" },
+      { id: 6, day: 2, name: "open yourself", artist: "SteinerndeMedusa", size: "2x3", blocks: 6, bonus: "+5", file: "image-63e40532011e7526.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1555340424237813760/image.png?backend=b2&ex=6ae860e5&is=6ae70f65&hm=518e176e0a46bd6abe86e380f4d24f1ed07bd53e2ffaad4a23d5f6bcf3cc2a1c&" },
+      { id: 7, day: 2, name: "Kaguya", artist: "KINGS OF CLOUD", size: "1x1 (3d)", blocks: 1, bonus: "+1", file: "9A58F6A9-FE6D-49DB-A2E9-504DE41D5E92-c4d0918150fccd6b.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1555513924995252264/9A58F6A9-FE6D-49DB-A2E9-504DE41D5E92.png?backend=b2&ex=6ae859bb&is=6ae7083b&hm=cf9ae7d2eff2d6506a1938925923379379c062359fe8f85b9cd548d03749dadc&" },
+      { id: 8, day: 2, name: "Mr Duck", artist: "Endenjoyers", size: "1x1", blocks: 1, bonus: "+1", file: "2026-10-02_23.43.43-282014c33c8c2bb0.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1555697231175098460/2026-10-02_23.43.43.png?backend=b2&ex=6ae85bb3&is=6ae70a33&hm=93604747b81567a70c0ee6605808bd048b48be4ee13e3608e8cf49c79392f80f&" },
+      { id: 9, day: 3, name: "Cybergirl", artist: "SteinerndeMedusa", size: "2x3", blocks: 6, bonus: "+5", file: "image-9fb2b486b7cd8e2e.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1555702139861598238/image.png?backend=b2&ex=6ae86045&is=6ae70ec5&hm=593f0da3987d386d508e2605aa99385e3a07d79922006e93ae136b02ee25087d&" },
+      { id: 10, day: 3, name: "Girl in water", artist: "CherryTeam", size: "5x5", blocks: 25, bonus: "+10", file: "image-3-4c4c2a55ca4cb6b5.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1555919727514099836/image-3.png?backend=b2&ex=6ae8822a&is=6ae730aa&hm=6e074aff80e4171949e8a0993715843573f621e124b070605b82ab556a65ac76&" },
+      { id: 11, day: 3, name: "The Wind", artist: "KINGS OF CLOUD", size: "2x2", blocks: 4, bonus: "+3", file: "image-6b3d4d4050631c1f.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1555926471296688198/image.png?backend=b2&ex=6ae88872&is=6ae736f2&hm=f45153cf09048ad1e88dc3d6ac0a01f7a92f105be0e42ae4d8f84c104f88f3ab&" },
+      { id: 12, day: 3, name: "Another Duck", artist: "Endenjoyers", size: "2x3", blocks: 6, bonus: "+5", file: "2026-10-03_21.31.24-4ac9e5718b3b49b6.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1556026540511330334/2026-10-03_21.31.24.png?backend=b2&ex=6ae83ce4&is=6ae6eb64&hm=7559dde9bd20cb26e68c39504a19a300ecba31fe4037edcc26145d4e5f888f39&" },
+      { id: 13, day: 4, name: "her eyes", artist: "SteinerndeMedusa", size: "3x1", blocks: 3, bonus: "+3", file: "image-ce9c8840100c7ed9.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1556065184437510274/image.png?backend=b2&ex=6ae860e2&is=6ae70f62&hm=be55972678e677c34b893d705088547259fe9e7953b513e99a2296cb46ab4a32&" },
+      { id: 14, day: 4, name: "San Francisco", artist: "CherryTeam", size: "9x6", blocks: 54, bonus: "+10", file: "image-4-431da53db93e0c75.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1556201905821057094/image-4.png?backend=b2&ex=6ae83777&is=6ae6e5f7&hm=590bb79766004e86cf2d8b76276e2985511376ae01e13185e98d9284cd2a3bde&" },
+      { id: 15, day: 4, name: "And another one", artist: "Endenjoyers", size: "1x2", blocks: 2, bonus: "+3", file: "2026-10-04_16.05.10-e0051752a4f904d0.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1556306712158539787/2026-10-04_16.05.10.png?backend=b2&ex=6ae89912&is=6ae74792&hm=61f86782dfea5ca25a5f969cb080df4335c0d5394e31d2080088f78e97ef2aa1&" },
+      { id: 16, day: 4, name: "Jack of Spades", artist: "KINGS OF CLOUD", size: "2x3", blocks: 6, bonus: "+5", file: "image-61015bcfeee6bde9.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1556314226518401164/image.png?backend=b2&ex=6ae8a012&is=6ae74e92&hm=bf96cab43fec37566572d755d455eb1f7ff82fee7c9babf5515fe19ba3930ff1&" },
+      { id: 17, day: 5, name: "Kaguya-sama: Love is War", artist: "KINGS OF CLOUD", size: "2x3", blocks: 6, bonus: "+5", file: "image-5586cec6da6bc8f7.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1556426045916450916/image.png?backend=b2&ex=6ae85f76&is=6ae70df6&hm=e52c68e33290aca95f4df26019397d4336e14ee415e5d698844322ff3569f781&" },
+      { id: 18, day: 5, name: "The End?", artist: "SteinerndeMedusa", size: "2x3", blocks: 6, bonus: "+5", file: "image-6f10ceb1d0ba9f33.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1556432689589002311/image.png?backend=b2&ex=6ae865a6&is=6ae71426&hm=637e1bb56c1f93833a5bd853889c901676e99b7da82d6fd1667f5252f31b041c&" },
+      { id: 19, day: 5, name: "Cologne", artist: "CherryTeam", size: "3x5", blocks: 15, bonus: "+8", file: "image-8abf361d1311c7ff.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1556491352265457674/image.png?backend=b2&ex=6ae89c48&is=6ae74ac8&hm=fc7acfeb7d6f775b166963987a272610202cec5d2e7438847f9d55893d4032cf&" },
+      { id: 20, day: 5, name: "An ordinary Spaceship", artist: "Endenjoyers", size: "1x2", blocks: 2, bonus: "+3", file: "2026-10-05_16.57.49-0bf473332c5ddf72.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1556682416704331897/2026-10-05_16.57.49.png?backend=b2&ex=6ae8a579&is=6ae753f9&hm=3ea99d9f6da92b518ed71818e77171dec821863241ae07906ed7930eb1c9cc5a&" },
+      { id: 21, day: 6, name: "Red accent", artist: "CherryTeam", size: "2x3", blocks: 6, bonus: "+5", file: "IMG_20261006_000406-b95b76503ef60d58.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1556778508561154058/IMG_20261006_000406.png?backend=b2&ex=6ae85637&is=6ae704b7&hm=6938ac1e4cc0452fc7ac3bbb4155ee26f58d2af0d414bca3d389640310f77f43&" },
+      { id: 22, day: 6, name: "Nacht in Angst", artist: "Endenjoyers", size: "2x2", blocks: 4, bonus: "+3", file: "image-3d16f98064e3b4c9.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1556788456066121739/image.png?backend=b2&ex=6ae85f7b&is=6ae70dfb&hm=78a71f572975c43710d0c6f0c636f699fe6e54c0229adfa3e2f8dab2976b8d3a&" },
+      { id: 23, day: 6, name: "dirty mind", artist: "SteinerndeMedusa", size: "3x4", blocks: 12, bonus: "+8", file: "image-fb75fdd11f59e16c.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1556789351696965662/image.png?backend=b2&ex=6ae86051&is=6ae70ed1&hm=4279ef64f9a5cfc323c8d6f437520ab10d8733e390b85abec9f3ad2016edc1d7&" },
+      { id: 24, day: 6, name: "eMOTIVe", artist: "KINGS OF CLOUD", size: "2x2", blocks: 4, bonus: "+3", file: "image-3469e257305083af.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1556967114235977788/image.png?backend=b2&ex=6ae85d1f&is=6ae70b9f&hm=756bca67837f095f779eb5a839ffbbf552875ea45e67ae173bb82366352b39e9&" },
+      { id: 25, day: 7, name: "Future of joy", artist: "SteinerndeMedusa", size: "3x2", blocks: 6, bonus: "+5", file: "image-77c9655dac257435.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1557151645778055238/image.png?backend=b2&ex=6ae8603a&is=6ae70eba&hm=085e6b534ba2033ef1844177f4302a8d7b945e4d3e8374eb0616d1c2dfbb9f6b&" },
+      { id: 26, day: 7, name: "Grievous", artist: "CherryTeam", size: "2x3", blocks: 6, bonus: "+5", file: "image-7a992413b4348115.webp", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1557265400843210773/image.webp?backend=b2&ex=6ae8216c&is=6ae6cfec&hm=5f7c6c5677ed2020308103e76d0dafed4a59cfad77310c1187de43a355871e8d&" },
+      { id: 27, day: 7, name: "Alaska", artist: "KINGS OF CLOUD", size: "3x2", blocks: 6, bonus: "+5", file: "image-82f0eb27676cae05.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1557363805195862157/image.png?backend=b2&ex=6ae87d11&is=6ae72b91&hm=177b855ce7ad9eb48c20a0b631214f1a7652f05346fa1bb11719924a41f43cf4&" },
+      { id: 28, day: 7, name: "Wanted Maniac", artist: "Endenjoyers", size: "2x3", blocks: 6, bonus: "+5", file: "image-63f9dff0becea82d.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1557470198800326687/image.png?backend=b2&ex=6ae83767&is=6ae6e5e7&hm=081f8d9ff0527a35b1a30ec464c4c5c8d9ac3fad96059186b9d8bd851c9ac50e&" },
+      { id: 29, day: 7, name: "nixos", artist: "diskutabel", size: "2x1", blocks: 2, bonus: "+3", file: "image-c5d4971ac5cf737c.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1557474317334220810/image.png?backend=b2&ex=6ae83b3d&is=6ae6e9bd&hm=470b7c77c356deb505091817d858e7231eef26f9aa83d4298da530b4eafd613e&" },
+      { id: 30, day: 8, name: "who is the real one?", artist: "SteinerndeMedusa", size: "2x2", blocks: 4, bonus: "+3", file: "image-fc4b3c9aa83b20cb.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1557590270936088596/image.png?ex=6ae8a73b&is=6ae755bb&hm=2baae411883cc122f4cce99872fdf9de9f5d53c1b2572403b495270b35b73d61&" },
+      { id: 31, day: 8, name: "Joker", artist: "CherryTeam", size: "2x3", blocks: 6, bonus: "+5", file: "image-1-d336428ffd636130.webp", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1557627461318086716/image-1.webp?ex=6ae8211e&is=6ae6cf9e&hm=81e8d1cdd2e55a2e9c8025be41d717ade701a548fa014a620e8380c2a60c973f&" },
+      { id: 32, day: 8, name: "Arctic Scene", artist: "KINGS OF CLOUD", size: "3x1", blocks: 3, bonus: "+3", file: "image-fc7d25bfcebc7847.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1557685628232138834/image.png?ex=6ae8574a&is=6ae705ca&hm=70187408c510974f382e0316c6f55a4dbf0e73abadd0445044dc1eaabd933bb9&" },
+      { id: 33, day: 8, name: "Kater", artist: "Endenjoyers", size: "1x2", blocks: 2, bonus: "+3", file: "2026-10-08_20.21.45-c7829f74c6927ecc.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1557820720484974602/2026-10-08_20.21.45.png?ex=6ae82c5a&is=6ae6dada&hm=d9412c9847441417d720cdd14954be223a4adb269b3f5856b6f11a19d4906353&" },
+      { id: 34, day: 9, name: "A coin for a song?", artist: "SteinerndeMedusa", size: "2x2", blocks: 4, bonus: "+3", file: "image-f0e297da9ef75999.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1557974103955341412/image.png?ex=6ae81274&is=6ae6c0f4&hm=4762c29517aabbfa8ffd90778e6faf59aebeecdce3bdd74b1ab8dcc8d55c76aa&" },
+      { id: 35, day: 9, name: "F1", artist: "CherryTeam", size: "5x3", blocks: 15, bonus: "+8", file: "image-1-fd3fd1c467ee47d8.webp", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1558003726784929834/image-1.webp?ex=6ae82e0a&is=6ae6dc8a&hm=aa918b10291e32b753087adcefd7af7a13aae604da864138371460ec8f4a5d1d&" },
+      { id: 36, day: 9, name: "Rise and Shine.", artist: "KINGS OF CLOUD", size: "3x2", blocks: 6, bonus: "+5", file: "image-3a00a69eac7a1935.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1558105635651067914/image.png?ex=6ae88cf3&is=6ae73b73&hm=c109c73b18cdabfba6777c6c3227c4ef694d8cac11050954a2ea1c553541aba4&" },
+      { id: 37, day: 9, name: "Minion in se Pool", artist: "Endenjoyers", size: "2x3", blocks: 6, bonus: "+5", file: "2026-10-09_18.45.21-437debfb5e7475bb.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1558158919963119736/2026-10-09_18.45.21.png?ex=6ae815d3&is=6ae6c453&hm=65ea2207c7b41ee6e76b78db2ece695007aca9190d89634bf96fce4ef4c2cdda&" },
+      { id: 38, day: 10, name: "Silent Queen", artist: "SteinerndeMedusa", size: "2x4", blocks: 8, bonus: "+5", file: "image-3109c7ca12aa414b.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1558239160148566026/image.png?ex=6ae8608e&is=6ae70f0e&hm=dbadfa9113d37a8b5cb121600b3e08314921bd2da2a043dffae723b3a0f44331&" },
+      { id: 39, day: 10, name: "Moon landing", artist: "CherryTeam", size: "9x6", blocks: 54, bonus: "+10", file: "image-3-0add2a855034cdcf.webp", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1558388296332218450/image-3.webp?ex=6ae842b3&is=6ae6f133&hm=2993f8002ca69ba6a15b338cb9ea9e59674b69cebe6c6eebf7802ab10227ac45&" },
+      { id: 40, day: 10, name: "Some Green Guy", artist: "Endenjoyers", size: "1x2", blocks: 2, bonus: "+3", file: "2026-10-10_13.16.26-62a755d90748cc80.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1558438330431963136/2026-10-10_13.16.26.png?ex=6ae8714c&is=6ae71fcc&hm=f174443ae1e64a22f3c88539ddcbcaf5a70d5e77c517e2c932980c09c98bca2b&" },
+      { id: 41, day: 10, name: "Now, this is what a REAL duck looks like.", artist: "KINGS OF CLOUD", size: "2x2", blocks: 4, bonus: "+3", file: "image-75df22c72b65f181.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1558457910491611137/image.png?ex=6ae88388&is=6ae73208&hm=d104197db920365d4c1d8b128de228b6f7ff62cc421ecbf5f408a5113e7718ea&" },
+      { id: 42, day: 11, name: "who is he?", artist: "SteinerndeMedusa", size: "3x2", blocks: 6, bonus: "+5", file: "image-1a51501cbea2755c.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1558600455997620314/image.png?ex=6ae85f8a&is=6ae70e0a&hm=8f3ef66ca735d1cc7760da799ed1d4379451984c2e42ec6dac810e25cd6a16e6&" },
+      { id: 43, day: 11, name: "Sword girl", artist: "CherryTeam", size: "7x3", blocks: 21, bonus: "+10", file: "image-4-d4f62ade6a169f06.webp", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1558785761392730112/image-4.webp?ex=6ae8635e&is=6ae711de&hm=b0c9c1b9192ad89f03dc5909b8fedb4c6c2adb2dc1f52fe88a8b8ca12c6f3014&" },
+      { id: 44, day: 11, name: "Teufelsberg", artist: "Endenjoyers", size: "2x2", blocks: 4, bonus: "+3", file: "image-a47746990d023bed.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1558789961812156518/image.png?ex=6ae86747&is=6ae715c7&hm=75aaa3208e759d941acf64fdc007eaef5995dc9bde0c513f1424e2d6e44d152f&" },
+      { id: 45, day: 11, name: "The Flaming Sword", artist: "KINGS OF CLOUD", size: "1x2", blocks: 2, bonus: "+3", file: "image-09da023e0f599e0b.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1558889883081383936/image.png?ex=6ae81b96&is=6ae6ca16&hm=84c1e79d6e6511e20bf025b33163f16f005fbe0587f1e8b72dee9d24ec7d9282&" },
+      { id: 46, day: 12, name: "hell?", artist: "SteinerndeMedusa", size: "2x3", blocks: 6, bonus: "+5", file: "image-92705c832a8dde3e.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1558965271190831176/image.png?ex=6ae861cc&is=6ae7104c&hm=3861f531c03169e5ce085cb2d12e307c9d80532ff11f88ac0b35b0c3d3bae857&" },
+      { id: 47, day: 12, name: "Athena", artist: "CherryTeam", size: "5x3", blocks: 15, bonus: "+8", file: "image-5-ef7f5a20a7a93efb.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1559114232170024970/image-5.png?ex=6ae843c7&is=6ae6f247&hm=b78cea0d5431d8973b6ac1d3b2f13c5c07ee4a424741998b3661146c043c12d5&" },
+      { id: 48, day: 12, name: "The Borealis", artist: "KINGS OF CLOUD", size: "4x2", blocks: 8, bonus: "+5", file: "image-28e39db488ddc084.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1559224544407986308/image.png?ex=6ae8aa84&is=6ae75904&hm=77141c852e9d60d8d7fc96d2a5416206636c9c9009b48338be6fd36b25ba83f1&" },
+      { id: 49, day: 12, name: "Kommunisten Anarchisten", artist: "Endenjoyers", size: "2x2", blocks: 4, bonus: "+3", file: "2026-10-12_19.15.03-a97e837203ca0296.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1559253494349828166/2026-10-12_19.15.03.png?ex=6ae81cba&is=6ae6cb3a&hm=31761b68cd5952fdfc8a26fdc1b350dcea1864627f1a4ca3c30b93ad70816574&" },
+      { id: 50, day: 13, name: "sad", artist: "SteinerndeMedusa", size: "2x2", blocks: 4, bonus: "+3", file: "image-3691ff772bdf7957.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1559325139030638763/image.png?ex=6ae85f74&is=6ae70df4&hm=e980b906f03a2474775f93cc7e99fde5fec2a2e550b3a6729206ab57318efa90&" },
+      { id: 51, day: 13, name: "Moon", artist: "CherryTeam", size: "3x3", blocks: 9, bonus: "+5", file: "image-5-1fe1d7dadd950031.webp", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1559459704965697617/image-5.webp?ex=6ae83407&is=6ae6e287&hm=4203057aaa1290fd771bd84010516e8cd799634a10c26625fe6481c2566899e3&" },
+      { id: 52, day: 13, name: "Знамя Победы над Рейхстагом", artist: "KINGS OF CLOUD", size: "3x2", blocks: 6, bonus: "+5", file: "image-d49a295102758a8a.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1559494944937222234/image.png?ex=6ae854d8&is=6ae70358&hm=0241c23bdeec96f2b9a46d56f7ebe3aacc2d69ad8721682a6e453446d772f2f7&" },
+      { id: 53, day: 13, name: "Walle", artist: "Endenjoyers", size: "1x2", blocks: 2, bonus: "+3", file: "image-fc7559100d45035b.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1559674028187459584/image.png?ex=6ae852e1&is=6ae70161&hm=e7bec4176871be593c91c5d8570fca5c585d1c642cc9e0a33548766303384147&" },
+      { id: 54, day: 14, name: "holy tech", artist: "SteinerndeMedusa", size: "2x2", blocks: 4, bonus: "+3", file: "image-ba3520208631d687.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1559690454461710406/image.png?ex=6ae8622d&is=6ae710ad&hm=6b719280ff9d1114d25bf9ea9485a2309b72fed544f64a15121f0b1fdb10fb36&" },
+      { id: 55, day: 14, name: "A-130", artist: "CherryTeam", size: "4x3", blocks: 12, bonus: "+8", file: "image-6-5cd3c3aee8ae3ea4.webp", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1559802249792856164/image-6.webp?ex=6ae8218c&is=6ae6d00c&hm=13b55e0259c441723657fd909210b1e8cbaf799ae06858517074f1c86bb45f30&" },
+      { id: 56, day: 14, name: "MAPLE GROVE UNIVERSITY", artist: "KINGS OF CLOUD", size: "3x2", blocks: 6, bonus: "+5", file: "image-7ef8827ae00bbd84.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1559920178517512232/image.png?ex=6ae88f60&is=6ae73de0&hm=ca9f8222605c92ab54a3426c5073ceb028efb172bb4792284537e20078ad1b22&" },
+      { id: 57, day: 14, name: "Tal des Schreckens", artist: "Endenjoyers", size: "2x2", blocks: 4, bonus: "+3", file: "image-a6602e21d1587f15.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1560025756497870989/image.png?ex=6ae848f4&is=6ae6f774&hm=a1ca35e4758da2fd4adb9a3a008e2cb8b5474dbfce0c8d73f9dd8ccd68062467&" },
+      { id: 58, day: 15, name: "take your mask off", artist: "SteinerndeMedusa", size: "2x2", blocks: 4, bonus: "+3", file: "image-189c7c002f0df3c9.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1560052790699630682/image.png?ex=6ae86221&is=6ae710a1&hm=130cef61a55e19df47cf314cefa7360dbe9d86b9b425b6a7f75f6378f403cc63&" },
+      { id: 59, day: 15, name: "Pit-House", artist: "CherryTeam", size: "2x3", blocks: 6, bonus: "+5", file: "wFFjaTGgVDVDgAAAABJRU5ErkJggg-7d71fae37fae1f36.webp", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1560224582353551445/wFFjaTGgVDVDgAAAABJRU5ErkJggg.webp?ex=6ae85960&is=6ae707e0&hm=61cfb5d965cafd093dac5cfe027a5121e3905609d094bb9ea616ec42f61c266b&" },
+      { id: 60, day: 15, name: "Childhood", artist: "Endenjoyers", size: "1x2", blocks: 2, bonus: "+3", file: "2026-10-15_20.25.57-77a19d340bac52a9.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1560358677649825962/2026-10-15_20.25.57.png?ex=6ae82d82&is=6ae6dc02&hm=8d0092db1b8863db75634dcd5c22771a20e1e893d5b4db9aeafeeab2e1025ce8&" },
+      { id: 61, day: 15, name: "Quit. Now.", artist: "KINGS OF CLOUD", size: "5x1", blocks: 5, bonus: "+5", file: "image-afc9d0f80841834c.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1560396646704218202/image.png?ex=6ae850df&is=6ae6ff5f&hm=7eb7ec9e0ed80bb3bd9cefb77642a9ad43ace6862f6f94c08b2779800044251b&" },
+      { id: 62, day: 16, name: "\"Veni, vidi, vici\"", artist: "CherryTeam", size: "8x6", blocks: 48, bonus: "+10", file: "image-7-037a084b0613cee0.webp", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1560516663307403264/image-7.webp?ex=6ae817e5&is=6ae6c665&hm=c735db37a9bac852228c35b9c0f9c42d6a89ed5811fbd15d5961d4b656428bf6&" },
+      { id: 63, day: 16, name: "who are you?", artist: "SteinerndeMedusa", size: "2x2", blocks: 4, bonus: "+3", file: "image-5560738e44b5e22d.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1560516717686292550/image.png?ex=6ae817f2&is=6ae6c672&hm=8d12a58fbacd142bb73153e65ddfb888d4c102b40d9584fc4ed4b521180490a8&" },
+      { id: 64, day: 16, name: "Niech wszystko splonie", artist: "KINGS OF CLOUD", size: "2x2", blocks: 4, bonus: "+3", file: "image-c24fc1cb56db732e.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1560604230593675285/image.png?ex=6ae86973&is=6ae717f3&hm=338ed935271858bceae5aeb46e08668fb96cf3bb060c152537cd65de66e27a2c&" },
+      { id: 65, day: 16, name: "Catwomen", artist: "Endenjoyers", size: "1x2", blocks: 2, bonus: "+3", file: "2026-10-15_19-d9a8eaa59dc11059.webp", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1560722207628460222/2026-10-15_19.webp?ex=6ae82e93&is=6ae6dd13&hm=9ff6f3925c832165b37daa8902ac4daf320af1840be2ca017f288675c342f260&" },
+      { id: 66, day: 17, name: "your not gonna win this", artist: "SteinerndeMedusa", size: "2x2", blocks: 4, bonus: "+3", file: "image-bc428a1e06f6f356.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1560775001333039274/image.png?ex=6ae85fbe&is=6ae70e3e&hm=d2e6ada68441c94ed549a0f6dc56132e45fd242edf1d799fcdf1cfa818d5717d&" },
+      { id: 67, day: 17, name: "The black prince", artist: "CherryTeam", size: "4x5", blocks: 20, bonus: "+8", file: "image-8-026b9528ddc933ff.webp", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1560941193611706369/image-8.webp?ex=6ae851c5&is=6ae70045&hm=0791eb7ee67f6e4e400a09eb1d83539a61756b35aeda6732adf635db2d2ce5e4&" },
+      { id: 68, day: 17, name: "Ocean´s 11", artist: "Endenjoyers", size: "2x3", blocks: 6, bonus: "+5", file: "2026-10-17_16.17.56-00408e768aed855d.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1561020917415682088/2026-10-17_16.17.56.png?ex=6ae89c05&is=6ae74a85&hm=2fd9e162a7cdd3b3dedc89c136aa2871b6c1f864c46e5682e29555bfe83631dd&" },
+      { id: 69, day: 17, name: "Generic Maptober Map", artist: "KINGS OF CLOUD", size: "2x2", blocks: 4, bonus: "+3", file: "image-e174042a9bd92a66.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1561039993068191886/image.png?ex=6ae8adc9&is=6ae75c49&hm=cd89d9069cc8dec092a6776a4dc26fc8df80958507c2eda9fea51d54f9b4337a&" },
+      { id: 70, day: 18, name: "taste of the dark", artist: "SteinerndeMedusa", size: "2x2", blocks: 4, bonus: "+3", file: "image-9cadc1735157bdf1.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1561141943029993622/image.png?ex=6ae863fb&is=6ae7127b&hm=96a0e2558afd5223182d5b33d7c29c0ab6dbf5bed01755ddb8aa500a5c567ce8&" },
+      { id: 71, day: 18, name: "cute girl", artist: "KINGS OF CLOUD", size: "1x1", blocks: 1, bonus: "+1", file: "image-02a7c808d1922619.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1561142351802404895/image.png?ex=6ae8645d&is=6ae712dd&hm=49a177cba76fb3ff39cc4cf65ea33d8a464da066b672da0f1dcda7d3b913cc6b&" },
+      { id: 72, day: 18, name: "Scary Dragon", artist: "Endenjoyers", size: "2x2", blocks: 4, bonus: "+3", file: "2026-10-17_21-202f3a76a793c121.webp", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1561142504852553908/2026-10-17_21.webp?ex=6ae86481&is=6ae71301&hm=74b53ee5be64e30f1af3c7827bde9a1968075efcf7ae77bdc4e73c51ff31e37b&" },
+      { id: 73, day: 18, name: "Nebula", artist: "CherryTeam", size: "7x7", blocks: 49, bonus: "+10", file: "image-6-b5cd1b54a2920a31.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1561275248140226602/image-6.png?ex=6ae83762&is=6ae6e5e2&hm=3c9211cd4eea9bbd2fb79e371094bff4e5cb7a34c7341c56828b9234b102f2b9&" },
+      { id: 74, day: 19, name: "dont forget your doll", artist: "SteinerndeMedusa", size: "2x2", blocks: 4, bonus: "+3", file: "image-e2510cfafef09006.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1561501218004803665/image.png?ex=6ae86115&is=6ae70f95&hm=883a4389a3ddc1db379b4e7c92523bd7d34285a0f4a2e5ee3267362b8748ee8b&" },
+      { id: 75, day: 19, name: "NIKE", artist: "CherryTeam", size: "4x5", blocks: 20, bonus: "+8", file: "image-9-643c31d68454a406.webp", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1561623174582374441/image-9.webp?ex=6ae829ea&is=6ae6d86a&hm=695f38fea027e5869fb442df686d16a00764f9da98694b5460cc9fc1616d62e9&" },
+      { id: 76, day: 19, name: "The prophecy might have been misinterpreted...", artist: "KINGS OF CLOUD", size: "2x1", blocks: 2, bonus: "+3", file: "image-b1ec4860e7ef2654.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1561732954856759326/image.png?ex=6ae89028&is=6ae73ea8&hm=b1548819e019016c2f3193f2aa39ec8246b2672c85e23fdf660234c99dc4ffcc&" },
+      { id: 77, day: 19, name: "La ilusión doble", artist: "Endenjoyers", size: "2x2", blocks: 4, bonus: "+3", file: "image-4b6f284ca6964bb0.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1561774341102903386/image.png?ex=6ae80df3&is=6ae6bc73&hm=7637b74e2cc118a82b6e7fbdc19dedccc989d020801cf6f48bd41c2b26f6cad1&" },
+      { id: 78, day: 20, name: "the light hurts", artist: "SteinerndeMedusa", size: "2x3", blocks: 6, bonus: "+5", file: "image-8c380eaf6b9a1c91.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1561932843377098752/image.png?ex=6ae8a191&is=6ae75011&hm=54dfa74bb754228f8d180d76bc6611416fb7016806878687f9d6f2c55bb8f891&" },
+      { id: 79, day: 20, name: "A2", artist: "CherryTeam", size: "3x5", blocks: 15, bonus: "+8", file: "image-2-3ac93d8d8a00a39d.webp", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1562014156448604160/image-2.webp?ex=6ae8448b&is=6ae6f30b&hm=f8282443a203a1d1d551473c5d9f943e8eaf74df956bb34c4718882adf5d0fab&" },
+      { id: 80, day: 20, name: "I know you'll make a fine specimen.", artist: "KINGS OF CLOUD", size: "2x2", blocks: 4, bonus: "+3", file: "Screenshot_2026-10-19_213613-684319f7e0805215.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1562034832941260871/Screenshot_2026-10-19_213613.png?ex=6ae857cd&is=6ae7064d&hm=a7271de7a0735660c61a89570e25cd5f527930a6fde8e389127c4f5e4d43660e&" },
+      { id: 81, day: 20, name: "Icy", artist: "Endenjoyers", size: "2x2", blocks: 4, bonus: "+3", file: "image-2863da107cf1d0b8.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1562186672685457539/image.png?ex=6ae83c76&is=6ae6eaf6&hm=5d916bb73804c40c7a3304e6c0cc255e897daf3ec2f1eb2454990086a7f10f8d&" },
+      { id: 82, day: 21, name: "in parts", artist: "SteinerndeMedusa", size: "2x3", blocks: 6, bonus: "+5", file: "image-4cde13d10f22396f.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1562314633480638515/image.png?ex=6ae80ae3&is=6ae6b963&hm=55c1ac13b85a7bf6bf2926904c7913db0860a445c4c4e1afcbfa43c2d4c99c10&" },
+      { id: 83, day: 21, name: "Why so serious", artist: "CherryTeam", size: "2x4", blocks: 8, bonus: "+5", file: "image-10-6da3d0991122814f.webp", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1562340469319671808/image-10.webp?ex=6ae822f2&is=6ae6d172&hm=d6f162a1aaabdf3ef11298e8a76d6ce2407f602722fca82132476f40216c4af7&" },
+      { id: 84, day: 21, name: "Antarctic Scene", artist: "KINGS OF CLOUD", size: "3x1", blocks: 3, bonus: "+3", file: "image-9577c2db46161688.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1562431928257347734/image.png?ex=6ae87820&is=6ae726a0&hm=0740775e6ab8d782478d5edb6329f2369cf4cac0516bbb921ec93c9e7f7d101d&" },
+      { id: 85, day: 21, name: "Der dunkle Rivale", artist: "Endenjoyers", size: "2x2", blocks: 4, bonus: "+3", file: "2026-10-21_21.09.48-ff68805e459537fd.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1562543916832522270/2026-10-21_21.09.48.png?ex=6ae837ac&is=6ae6e62c&hm=0f874ff2f410008b7f6d3c8b0fa240713102e6aefad973618286862a9886aa9b&" },
+      { id: 86, day: 22, name: "transformation", artist: "SteinerndeMedusa", size: "2x2", blocks: 4, bonus: "+3", file: "image-747cf7452f01ad21.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1562590504682782731/image.png?ex=6ae8630f&is=6ae7118f&hm=7dbe378d3a6cb1153e46d31293b2f9531ce7ebec9288c73ad3ab23bc260e024e&" },
+      { id: 87, day: 22, name: "There are 300 of these damn things on top of my maparts :)", artist: "KINGS OF CLOUD", size: "2x2", blocks: 4, bonus: "+3", file: "image-2f63529992da38e2.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1562792556381601913/image.png?ex=6ae8767c&is=6ae724fc&hm=8ace8f1a571df8ba4adee9458cce726d6c309963ee990f1bcf433499572e2f45&" },
+      { id: 88, day: 22, name: "Cato", artist: "CherryTeam", size: "5x4", blocks: 20, bonus: "+8", file: "IMG_20261022_183335-c997cc5b6c662171.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1562853461190508574/IMG_20261022_183335.png?ex=6ae8af35&is=6ae75db5&hm=82d543abe20e64705982e9981ab12f1d66827e9b0c4dce83761aedbb5ad6fbea&" },
+      { id: 89, day: 22, name: "Album Cover", artist: "Endenjoyers", size: "2x2", blocks: 4, bonus: "+3", file: "image-c5f5f2bab11d5687.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1562862895442829364/image.png?ex=6ae80f3e&is=6ae6bdbe&hm=7446728722489d9f181d3f1a6dfee855861702aefcd4087b5d2807ae9428fe88&" },
+      { id: 90, day: 23, name: "drag me to hell", artist: "SteinerndeMedusa", size: "2x2", blocks: 4, bonus: "+3", file: "image-41240d6577868849.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1562949555178184834/image.png?ex=6ae85ff4&is=6ae70e74&hm=2303d50155597a384c12bc3420124471b77c7a458c998a58d2c67f6a1390121c&" },
+      { id: 91, day: 23, name: "German Empire", artist: "KINGS OF CLOUD", size: "2x2", blocks: 4, bonus: "+3", file: "image-0bf27b7b74139609.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1563198027030724658/image.png?ex=6ae89e9c&is=6ae74d1c&hm=3c8c610bafe51a8e13dd3d8c7de908f18664f273b4808d3fd063de273b72a4e5&" },
+      { id: 92, day: 23, name: "BVB", artist: "CherryTeam", size: "2x2", blocks: 4, bonus: "+3", file: "image-12-66ace0d899f742a0.webp", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1563219012102398002/image-12.webp?ex=6ae80967&is=6ae6b7e7&hm=054f3555cb8c5f7f1a0ee0492434bc1a339c9e49b1e177f13bf48d78578d24a4&" },
+      { id: 93, day: 23, name: "Panic", artist: "Endenjoyers", size: "2x2", blocks: 4, bonus: "+3", file: "2026-10-23_20.37.50-c555e38239112494.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1563260810485174292/2026-10-23_20.37.50.png?ex=6ae83055&is=6ae6ded5&hm=0c472c1db32b65e83d3d8ed58101526d47ecc372ba9564d99daa3b2da87c9273&" },
+      { id: 94, day: 24, name: "meow", artist: "SteinerndeMedusa", size: "2x2", blocks: 4, bonus: "+3", file: "image-a676663d5b7976ba.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1563316967111266435/image.png?ex=6ae864a1&is=6ae71321&hm=840d4b6e08274a60588a2e2dd8b8fcb3f85a0325fd7792cfd0dffae316b7a29e&" },
+      { id: 95, day: 24, name: "BigD (Collab)", artist: "CherryTeam & Endenjoyers", size: "2x2", blocks: 4, bonus: "+3", file: "2026-10-24_13.02.53-752ccd0208042e73.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1563508690798256209/2026-10-24_13.02.53.png?ex=6ae86e70&is=6ae71cf0&hm=ba737f0c231fc873843820095ea3fea4cc9111ca98dfc2772d7ed5e0c07f25a1&" },
+      { id: 96, day: 24, name: "Tired", artist: "KINGS OF CLOUD", size: "2x2", blocks: 4, bonus: "+3", file: "image-084e120a3a435770.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1563551559810289664/image.png?ex=6ae8965d&is=6ae744dd&hm=fa38f50e6dc6e2cf81a600983b5964b13c18ec9b6095e8c8ce902274f5822633&" },
+      { id: 97, day: 25, name: "Ryuk", artist: "SteinerndeMedusa", size: "2x2", blocks: 4, bonus: "+3", file: "image-9ae86a416ca27790.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1563673807032680509/image.png?ex=6ae85f77&is=6ae70df7&hm=1b98810659c5f02cb8b85bd3501f235a9e52086560d353d0fffca69dcc09c0e2&" },
+      { id: 98, day: 25, name: "The fabulous Doc Hudson", artist: "Endenjoyers", size: "1x2", blocks: 2, bonus: "+3", file: "image-55a7f4590a15ecac.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1563838985766305903/image.png?ex=6ae8508c&is=6ae6ff0c&hm=03a88294033cbf8678120ad5feb770bd38d93b8f4f43914628ae1142017332ce&" },
+      { id: 99, day: 25, name: "Tower of Babel", artist: "CherryTeam", size: "2x2", blocks: 4, bonus: "+3", file: "image-ab81cc46fe065bf2.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1563920330400211134/image.png?ex=6ae89c4f&is=6ae74acf&hm=4feba1b03622347a4352a251d2acb1a0e05ad9ceca60271fecb270cbafa2f352&" },
+      { id: 100, day: 25, name: "Ryugyong Hotel", artist: "KINGS OF CLOUD", size: "2x3", blocks: 6, bonus: "+5", file: "image-57426a34d15d6032.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1563921780610175006/image.png?ex=6ae89da8&is=6ae74c28&hm=fb7d9357783b39f843122d00ca4c84f28ebc1de6cdbad080e0e718bf0c1d4f8b&" },
+      { id: 101, day: 26, name: "silence", artist: "SteinerndeMedusa", size: "2x2", blocks: 4, bonus: "+3", file: "image-b85e76b56a41b1f2.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1564052400451354845/image.png?ex=6ae86e8e&is=6ae71d0e&hm=0d795b079f5f5d5f77f2f716edd77061ea3ffa0edbb9fff64c2081f45ea8b9eb&" },
+      { id: 102, day: 26, name: "Noodle", artist: "Endenjoyers", size: "2x3", blocks: 6, bonus: "+5", file: "image-bd3d493d21aff3f8.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1564368866250067999/image.png?ex=6ae843ca&is=6ae6f24a&hm=268f9100bce286c3072ee164a1c9431396771818a68277e190165882b2a620d9&" },
+      { id: 103, day: 26, name: "Wookiee", artist: "CherryTeam", size: "2x3", blocks: 6, bonus: "+5", file: "image-18-3e7f1d28e7a5a578.webp", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1564371588625997855/image-18.webp?ex=6ae84653&is=6ae6f4d3&hm=04cde2ff050cc622e2d154e6d9d9aaf779056e4a0d4bf3268a284601585b531a&" },
+      { id: 104, day: 26, name: "Lenin", artist: "KINGS OF CLOUD", size: "4x2", blocks: 8, bonus: "+5", file: "image-c27c06c9e1234ac4.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1564381701537529898/image.png?ex=6ae84fbe&is=6ae6fe3e&hm=12a44cad339c572d424813741ced69c7b146fb29c056d0da7f23642444d90670&" },
+      { id: 105, day: 27, name: "Fates120 (Collab)", artist: "KINGS OF CLOUD & Endenjoyers", size: "2x2", blocks: 4, bonus: "+3", file: "image-67eb105730055b1f.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1564421200862650368/image.png?ex=6ae87487&is=6ae72307&hm=e21949cfc261e2dda026318616b5db57c6827e784ea100b47d7e1ab7ee5f310e&" },
+      { id: 106, day: 27, name: "smile for me", artist: "SteinerndeMedusa", size: "2x2", blocks: 4, bonus: "+3", file: "image-4a8a17ffd930b41e.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1564517285635428413/image.png?ex=6ae82544&is=6ae6d3c4&hm=68632193fef228ac28a7e946034c0a8d5c5bb86e45f4fe7560b392fa7a0a3567&" },
+      { id: 107, day: 27, name: "Someone shot", artist: "CherryTeam", size: "2x2", blocks: 4, bonus: "+3", file: "image-19-161e4c7ff0855e15.webp", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1564654512071905370/image-19.webp?ex=6ae8a511&is=6ae75391&hm=b3d1098c392fb9ce6d00bf5a2fa21a368b8ace6f8a61ff859858b5e3f54d03c9&" },
+      { id: 108, day: 28, name: "smiling evil", artist: "SteinerndeMedusa", size: "2x2", blocks: 4, bonus: "+3", file: "image-19125d2f33714196.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1564881819701223455/image.png?ex=6ae82743&is=6ae6d5c3&hm=443a42d550b49bce843406dfc08a2d54a65e30580d520f331212d287273accc4&" },
+      { id: 109, day: 28, name: "HADES", artist: "KINGS OF CLOUD", size: "4x2", blocks: 8, bonus: "+5", file: "image-f56c355345610357.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1564974968918376519/image.png?ex=6ae87e04&is=6ae72c84&hm=1d445d577b62151252ec019220c661b27d665b20da3285b9fb6b0bfcfa9e4eca&" },
+      { id: 110, day: 28, name: "2D", artist: "Endenjoyers", size: "2x3", blocks: 6, bonus: "+5", file: "gorillaz-57e219122601fc31.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1564981942825521294/gorillaz.png?ex=6ae88483&is=6ae73303&hm=12617bd8a22077b7632f59ed34b71fb5d830325a25a19348beb4b25c97fa263f&" },
+      { id: 111, day: 28, name: "Darth Vader", artist: "CherryTeam", size: "2x2", blocks: 4, bonus: "+3", file: "image-16-286d8075da86dc3e.webp", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1565095785417146578/image-16.webp?ex=6ae845c9&is=6ae6f449&hm=a2606a9b903364b120026a76801a14f7beab5fa3d381ed43e5f2abfe4882b98d&" },
+      { id: 112, day: 29, name: "taste my food", artist: "SteinerndeMedusa", size: "2x2", blocks: 4, bonus: "+3", file: "image-9da76f56fe598357.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1565140426787135569/image.png?ex=6ae86f5c&is=6ae71ddc&hm=4529520b12275b261690f13d42cd11c420ddc4f5878ed7b9d2b8ca8109663f12&" },
+      { id: 113, day: 29, name: "Eye", artist: "CherryTeam", size: "4x3", blocks: 12, bonus: "+8", file: "image-7-fbd3dba947fbd585.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1565258677341126666/image-7.png?ex=6ae834bd&is=6ae6e33d&hm=762aa253eff5472b66b7be4e380d6c7994e5db54d45e59fc71679c4a95249986&" },
+      { id: 114, day: 29, name: "Cry", artist: "KINGS OF CLOUD", size: "4x2", blocks: 8, bonus: "+5", file: "image-72bb15c93d6007a6.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1565292710380703744/image.png?ex=6ae8546f&is=6ae702ef&hm=21b213ad4020876a28f3a0e1173973da30164f0aff4279664a95d9913c40b058&" },
+      { id: 115, day: 29, name: "Murdoc", artist: "Endenjoyers", size: "2x3", blocks: 6, bonus: "+5", file: "image-9de3c0f644724989.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1565424057699016934/image.png?ex=6ae82603&is=6ae6d483&hm=18ab62685424a0c2f6e0176d2d75465ad850a8301421e7bb366964e9fca6cd47&" },
+      { id: 116, day: 30, name: "i miss something", artist: "SteinerndeMedusa", size: "2x2", blocks: 4, bonus: "+3", file: "image-19543d6c44d5abb5.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1565502927815180420/image.png?ex=6ae86f77&is=6ae71df7&hm=bdb041ae52d859877e1b38ac78424cbf4caa4dde09bc9ed42773edc961f7851d&" },
+      { id: 117, day: 30, name: "Russel", artist: "Endenjoyers", size: "2x3", blocks: 6, bonus: "+5", file: "image-84e60f4833f2bba0.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1565506770728648845/image.png?ex=6ae8730b&is=6ae7218b&hm=f8fc2871d5ca06a3bc4d8f061c189a4459b1c73a9c82d5f697f663c10b44ef59&" },
+      { id: 118, day: 30, name: "final; destination", artist: "KINGS OF CLOUD", size: "6x3", blocks: 18, bonus: "+8", file: "image-83c809d15a3ce66f.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1565659457076072448/image.png?ex=6ae8587f&is=6ae706ff&hm=1bd9dbb76b1f2bf419abe157c6d6ccf3e20f413a06b47cf0b9cf325e34ab8d97&" },
+      { id: 119, day: 30, name: "Diamond", artist: "CherryTeam", size: "3x2", blocks: 6, bonus: "+5", file: "image-8-727bf24abfcb046c.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1565682009446023269/image-8.png?ex=6ae86d80&is=6ae71c00&hm=14f88c504e45cd7c1e301583ab70f462fac3110cbc0ebaab750405d1dc4ebc21&" },
+      { id: 120, day: 31, name: "SPB", artist: "CherryTeam", size: "16x10", blocks: 160, bonus: "+10", file: "image-a902f39abb2b95ff.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1565832784113828083/image.png?ex=6ae8512b&is=6ae6ffab&hm=2c6f9a7f55bd0f4560efbc6a44fc6c30529f2275609be01567f48abd24b02494&" },
+      { id: 121, day: 31, name: "Resident Evil Village", artist: "SteinerndeMedusa", size: "4x10", blocks: 40, bonus: "+10", file: "image-7e90b1c6aeb9f81c.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1565863161503027200/image.png?ex=6ae86d76&is=6ae71bf6&hm=1f728ceda029dc9e219ea17353c2bcea64f0c5329fe60e2c1ba3f6652538656c&" },
+      { id: 122, day: 31, name: "Europe's Downfall (Collab)", artist: "Endenjoyers & SteinerndeMedusa", size: "6x6", blocks: 36, bonus: "+10", file: "2026-10-28_19.11.56-456068a5ffd16faf.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1565864577906778343/2026-10-28_19.11.56.png?ex=6ae86ec7&is=6ae71d47&hm=8b5c9a2415f5ee05bd838d3808e2bf149cbf00b21ccf099bfc14c2402efd75ff&" },
+      { id: 123, day: 31, name: "Maptober's over", artist: "KINGS OF CLOUD", size: "3x3", blocks: 9, bonus: "+5", file: "image-e5b54513e723a65b.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1565888007930773514/image.png?ex=6ae88499&is=6ae73319&hm=1d1168d88fd9648cf5da41c0d02ba42911ff6360f69020de8334573b49cb2b2a&" },
+      { id: 124, day: 31, name: "The Succubus - pixelart by Dither", artist: "BrilleMC", size: "8x8", blocks: 64, bonus: "+10", file: "image-0e61e6fae7721b55.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1566040326458843156/image.png?ex=6ae869b5&is=6ae71835&hm=020d94f2c70926945a304ebfe7881df6a27524c71e824b85b1c96bb13d9543c1&" },
+      { id: 125, day: 31, name: "0b0t", artist: "aphied", size: "1x1 (3d)", blocks: 1, bonus: "+1", file: "image-8073c141dbfa4a02.png", image: "https://cdn.discordapp.com/attachments/1549869494556561408/1566218661490855936/image.png?ex=6ae8670b&is=6ae7158b&hm=330ab4fd278e57f707b01c8b5dde515febb15574601437b20a76f9d097ada229&" }
+    ];
+
+    let currentIndex = 0;
+    const STORAGE_KEY = "maptober_2026_jury_votes_v2";
+    let votes = {};
+
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) votes = JSON.parse(saved);
+    } catch (e) {}
+
+    const btnContainer = document.getElementById("rating-buttons-grid");
+    for (let score = 1; score <= 10; score++) {
+      const btn = document.createElement("button");
+      btn.dataset.score = score;
+      btn.innerText = score;
+      btn.onclick = () => submitVote(score);
+      btnContainer.appendChild(btn);
+    }
+
+    function loadMapImage(map) {
+      const imgEl = document.getElementById("map-preview-img");
+      const linkEl = document.getElementById("map-original-link");
+      const badgeEl = document.getElementById("img-source-badge");
+
+      imgEl.dataset.fallbackStage = "0";
+      badgeEl.textContent = "Local";
+      linkEl.href = map.file;
+
+      imgEl.onerror = function () {
+        const stage = parseInt(this.dataset.fallbackStage || "0");
+        if (stage === 0) {
+          this.dataset.fallbackStage = "1";
+          this.src = "images/" + map.file;
+          linkEl.href = "images/" + map.file;
+        } else if (stage === 1) {
+          this.dataset.fallbackStage = "2";
+          badgeEl.textContent = "Discord CDN";
+          this.src = map.image;
+          linkEl.href = map.image;
+        } else {
+          this.onerror = null;
+          badgeEl.textContent = "Offline";
+          this.src = `https://placehold.co/600x600/140b07/ff9d2e?text=${encodeURIComponent(map.name)}`;
+        }
+      };
+
+      imgEl.src = map.file;
+    }
+
+    function render() {
+      const map = mapsData[currentIndex];
+      const total = mapsData.length;
+      const currentVote = votes[map.id];
+
+      document.getElementById("map-name").textContent = map.name;
+      document.getElementById("map-artist").textContent = map.artist;
+      document.getElementById("map-artist").title = map.artist;
+      document.getElementById("badge-day").textContent = `DAY ${map.day}`;
+      document.getElementById("badge-size").textContent = `Size: ${map.size}`;
+      document.getElementById("map-blocks").textContent = `${map.blocks} ${map.blocks === 1 ? 'Map' : 'Maps'} (${map.size})`;
+      document.getElementById("map-bonus").textContent = `${map.bonus} PTS`;
+      document.getElementById("current-index-text").textContent = currentIndex + 1;
+      document.getElementById("total-maps-text").textContent = total;
+
+      loadMapImage(map);
+
+      const voteStatusEl = document.getElementById("current-vote-status");
+      if (currentVote) {
+        voteStatusEl.textContent = `${currentVote} / 10 POINTS`;
+        voteStatusEl.className = "font-pixel text-xs text-amber-400 font-bold";
+      } else {
+        voteStatusEl.textContent = "UNRATED";
+        voteStatusEl.className = "font-pixel text-xs text-maptober-textMuted";
+      }
+
+      document.querySelectorAll(".btn-score, #rating-buttons-grid button").forEach(btn => {
+        const val = parseInt(btn.dataset.score);
+        if (currentVote === val) {
+          btn.className = "btn-score py-3 rounded-lg font-pixel text-sm sm:text-base border-2 transition-all duration-150 text-black font-bold bg-gradient-to-b from-maptober-gold to-maptober-amber border-yellow-200 ring-2 ring-amber-400/50 shadow-[0_0_15px_rgba(255,157,46,0.5)] scale-105";
+        } else {
+          btn.className = `btn-score py-3 rounded-lg font-pixel text-sm sm:text-base border transition-all duration-150 ${
+            val >= 8 ? 'text-maptober-gold' : 'text-maptober-textMain'
+          } bg-maptober-obsidian border-maptober-border hover:border-maptober-amber hover:bg-maptober-cardHover`;
+        }
+      });
+
+      document.getElementById("btn-prev").disabled = (currentIndex === 0);
+      document.getElementById("btn-next").disabled = (currentIndex === total - 1);
+
+      const ratedCount = Object.keys(votes).length;
+      const percent = Math.round((ratedCount / total) * 100);
+      document.getElementById("progress-bar-fill").style.width = `${percent}%`;
+      document.getElementById("progress-percent-label").textContent = `${percent}% completed (${ratedCount}/${total})`;
+      document.getElementById("header-progress-badge").textContent = `${ratedCount}/${total}`;
+
+      const exportBox = document.getElementById("export-section");
+      if (ratedCount === total) {
+        exportBox.classList.remove("hidden");
+        updateExportPreview();
+      } else {
+        exportBox.classList.add("hidden");
+      }
+    }
+
+    function buildDiscordExportString() {
+      const ratedKeys = Object.keys(votes);
+      const avg = ratedKeys.length > 0
+        ? (Object.values(votes).reduce((a, b) => a + b, 0) / ratedKeys.length).toFixed(2)
+        : "0.00";
+
+      const payload = {
+        event: "Maptober2026",
+        rated: ratedKeys.length,
+        avg_vote: parseFloat(avg),
+        votes: votes
+      };
+
+      return `🎃 **MAPTOBER 2026 JURY VOTE** (${ratedKeys.length}/125 Maps • Ø ${avg}/10)\n\`\`\`json\n${JSON.stringify(payload)}\n\`\`\``;
+    }
+
+    function updateExportPreview() {
+      const output = document.getElementById("raw-export-output");
+      if (output) {
+        output.value = buildDiscordExportString();
+      }
+
+      const summaryContainer = document.getElementById("juror-summary-cards");
+      if (!summaryContainer) return;
+
+      const mainTeams = ["CherryTeam", "SteinerndeMedusa", "Endenjoyers", "KINGS OF CLOUD"];
+      const homeruns = { "SteinerndeMedusa": 35, "Endenjoyers": 35, "CherryTeam": 35, "KINGS OF CLOUD": 35 };
+      const stats = {};
+      mainTeams.forEach(t => stats[t] = { count: 0, voteSum: 0, bonusSum: 0 });
+
+      mapsData.forEach(m => {
+        const v = votes[m.id] || 0;
+        const b = parseInt(m.bonus.replace("+", "")) || 0;
+        mainTeams.forEach(team => {
+          if (m.artist.includes(team)) {
+            stats[team].count++;
+            stats[team].voteSum += v;
+            stats[team].bonusSum += b;
+          }
+        });
+      });
+
+      summaryContainer.innerHTML = mainTeams.map(team => {
+        const s = stats[team];
+        const hr = homeruns[team] || 0;
+        const totalScore = s.voteSum + s.bonusSum + hr;
+        const avg = s.count > 0 ? (s.voteSum / s.count).toFixed(1) : "0.0";
+        return `
+          <div class="bg-maptober-obsidian/90 border border-maptober-border rounded-lg p-2.5 flex flex-col justify-between">
+            <div class="flex items-center justify-between gap-1">
+              <span class="font-bold text-xs text-white truncate">${team}</span>
+              ${hr > 0 ? '<span class="text-[9px] font-pixel px-1.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-500/40" title="31/31 Days Homerun Bonus">+35 HR</span>' : ''}
+            </div>
+            <div class="mt-1.5 flex items-baseline justify-between">
+              <span class="font-pixel text-sm text-maptober-gold">${totalScore} pts</span>
+              <span class="font-mono text-[10px] text-maptober-textMuted">Ø ${avg} (${s.count} maps)</span>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function toggleRulesModal() {
+      document.getElementById("rules-modal").classList.toggle("hidden");
+    }
+
+    function toggleArtistsModal() {
+      const modal = document.getElementById("artists-modal");
+      const isHidden = modal.classList.contains("hidden");
+
+      if (isHidden) {
+        const tbody = document.getElementById("artists-table-body");
+        tbody.innerHTML = "";
+
+        const artistStats = {};
+        mapsData.forEach(m => {
+          const artist = m.artist;
+          if (!artistStats[artist]) {
+            artistStats[artist] = { count: 0, days: new Set() };
+          }
+          artistStats[artist].count++;
+          artistStats[artist].days.add(m.day);
+        });
+
+        const sortedArtists = Object.entries(artistStats).sort((a, b) => b[1].count - a[1].count);
+
+        sortedArtists.forEach(([artist, data]) => {
+          const uniqueDays = data.days.size;
+          const isHomerun = uniqueDays >= 31 || ["CherryTeam", "SteinerndeMedusa", "Endenjoyers", "KINGS OF CLOUD"].includes(artist);
+          
+          const tr = document.createElement("tr");
+          tr.className = "hover:bg-maptober-card/50 transition";
+          tr.innerHTML = `
+            <td class="py-3 px-3.5 font-sans font-bold text-white flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-maptober-pumpkin"></span>
+              ${artist}
+            </td>
+            <td class="py-3 px-3.5 text-center font-bold text-maptober-gold">${data.count} maps</td>
+            <td class="py-3 px-3.5 text-center">
+              ${isHomerun 
+                ? '<span class="px-2.5 py-0.5 rounded bg-emerald-950/90 border border-emerald-500/50 text-emerald-300 font-pixel text-[10px]">YES (31/31)</span>' 
+                : `<span class="text-maptober-textMuted">${uniqueDays} days</span>`
+              }
+            </td>
+            <td class="py-3 px-3.5 text-right font-bold text-amber-400">
+              ${isHomerun ? '+35 PTS' : '+0 PTS'}
+            </td>
+          `;
+          tbody.appendChild(tr);
+        });
+
+        modal.classList.remove("hidden");
+      } else {
+        modal.classList.add("hidden");
+      }
+    }
+
+    function submitVote(score) {
+      const currentMap = mapsData[currentIndex];
+      votes[currentMap.id] = score;
+
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(votes));
+      } catch (e) {}
+
+      render();
+
+      if (currentIndex < mapsData.length - 1) {
+        setTimeout(() => {
+          navigate(1);
+        }, 120);
+      }
+    }
+
+    function navigate(delta) {
+      const newIdx = currentIndex + delta;
+      if (newIdx >= 0 && newIdx < mapsData.length) {
+        currentIndex = newIdx;
+        render();
+      }
+    }
+
+    function jumpToNextUnrated() {
+      for (let i = 1; i <= mapsData.length; i++) {
+        const checkIdx = (currentIndex + i) % mapsData.length;
+        if (votes[mapsData[checkIdx].id] === undefined) {
+          currentIndex = checkIdx;
+          render();
+          return;
+        }
+      }
+      showToast("All 125 maps have already been rated!");
+    }
+
+    function toggleGridModal() {
+      const modal = document.getElementById("grid-modal");
+      const isHidden = modal.classList.contains("hidden");
+
+      if (isHidden) {
+        const grid = document.getElementById("modal-grid-content");
+        grid.innerHTML = "";
+        mapsData.forEach((map, idx) => {
+          const isDone = votes[map.id] !== undefined;
+          const score = votes[map.id];
+          const div = document.createElement("div");
+          div.className = `p-3 rounded-lg border cursor-pointer transition flex flex-col justify-between ${
+            idx === currentIndex 
+              ? 'border-maptober-gold bg-maptober-pumpkin/20 shadow-[0_0_10px_rgba(255,157,46,0.25)]' 
+              : isDone
+                ? 'border-maptober-border bg-maptober-card/90 hover:border-maptober-amber/60'
+                : 'border-maptober-border/60 bg-maptober-obsidian/80 hover:border-maptober-border'
+          }`;
+          div.onclick = () => {
+            currentIndex = idx;
+            render();
+            toggleGridModal();
+          };
+          div.innerHTML = `
+            <div class="flex items-center justify-between text-xs mb-1.5">
+              <span class="font-pixel text-[10px] text-maptober-textMuted">#${map.id} • DAY ${map.day}</span>
+              ${isDone 
+                ? `<span class="bg-amber-500/20 text-maptober-gold border border-amber-500/40 font-bold px-1.5 py-0.5 rounded text-[10px] font-pixel">${score}/10</span>` 
+                : `<span class="bg-maptober-dark text-maptober-textMuted px-1.5 py-0.5 rounded text-[10px] font-mono">open</span>`
+              }
+            </div>
+            <div class="font-bold text-white text-xs truncate" title="${map.name}">${map.name}</div>
+            <div class="text-[11px] text-maptober-parchment/80 truncate mt-0.5">${map.artist}</div>
+          `;
+          grid.appendChild(div);
+        });
+        modal.classList.remove("hidden");
+      } else {
+        modal.classList.add("hidden");
+      }
+    }
+
+    function copySubmissionData() {
+      const ratedKeys = Object.keys(votes);
+      if (ratedKeys.length === 0) {
+        showToast("You haven't rated any maps yet!");
+        return;
+      }
+
+      const text = buildDiscordExportString();
+      const output = document.getElementById("raw-export-output");
+      if (output) {
+        output.value = text;
+        output.select();
+      }
+
+      let success = false;
+      try {
+        const tempInput = document.createElement("textarea");
+        tempInput.value = text;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        success = document.execCommand('copy');
+        document.body.removeChild(tempInput);
+      } catch (err) {
+        success = false;
+      }
+
+      if (!success && navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(`Discord message (${ratedKeys.length}/125) copied! Send it via DM to Kleingebaeck.`);
+        }).catch(() => {
+          showToast("Please copy the text block below manually.");
+        });
+      } else {
+        showToast(`Discord message (${ratedKeys.length}/125) copied! Send it via DM to Kleingebaeck.`);
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById("toast");
+      document.getElementById("toast-message").textContent = msg;
+      toast.classList.remove("translate-y-20", "opacity-0", "pointer-events-none");
+      setTimeout(() => {
+        toast.classList.add("translate-y-20", "opacity-0", "pointer-events-none");
+      }, 3500);
+    }
+
+    function promptResetVotes() {
+      const modal = document.createElement("div");
+      modal.className = "fixed inset-0 bg-black/85 z-50 flex items-center justify-center p-4";
+      modal.innerHTML = `
+        <div class="bg-maptober-card border-2 border-maptober-border p-6 rounded-xl max-w-sm w-full text-center shadow-2xl">
+          <div class="text-3xl mb-2">🔥</div>
+          <h3 class="text-maptober-gold font-pixel text-base mb-2">RESET ALL VOTES?</h3>
+          <p class="text-xs text-maptober-textMuted mb-5">All scores saved on this device will be permanently cleared.</p>
+          <div class="flex gap-2">
+            <button id="cancel-reset" class="flex-1 py-2 rounded bg-maptober-dark border border-maptober-border text-white text-xs font-pixel hover:bg-maptober-cardHover">CANCEL</button>
+            <button id="confirm-reset" class="flex-1 py-2 rounded bg-rose-700 text-white text-xs font-pixel hover:bg-rose-600">RESET</button>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+
+      modal.querySelector("#cancel-reset").onclick = () => modal.remove();
+      modal.querySelector("#confirm-reset").onclick = () => {
+        votes = {};
+        try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
+        render();
+        modal.remove();
+        showToast("All votes have been reset.");
+      };
+    }
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key >= "1" && e.key <= "9") {
+        submitVote(parseInt(e.key));
+      }
+      if (e.key === "0") {
+        submitVote(10);
+      }
+      if (e.key === "ArrowLeft") {
+        navigate(-1);
+      }
+      if (e.key === "ArrowRight") {
+        navigate(1);
+      }
+      if (e.key === "Escape") {
+        document.getElementById("grid-modal").classList.add("hidden");
+        document.getElementById("rules-modal").classList.add("hidden");
+        document.getElementById("artists-modal").classList.add("hidden");
+      }
+    });
+
+    render();
+  </script>
+</body>
+</html>
